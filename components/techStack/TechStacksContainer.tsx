@@ -44,7 +44,7 @@ function TechStacksContainer() {
         className="flex flex-col sm:flex-row w-full justify-evenly p-2"
       >
         {techStacks.map((tech, index) => (
-          <div className="flex flex-col gap-7 items-center">
+          <div key={tech.title} className="flex flex-col gap-7 items-center">
             <motion.div
               className="p-1 bg-gradient-to-tr from-base-900 rounded-xl to-base-500 h-[200px] w-full"
               initial={{
