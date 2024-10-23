@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className='antialiased mx-auto flex flex-col bg-gradient-to-r shadow-lg lg:shadow-red-600 from-black to-base-900 h-svh max-w-[1400px]'
+        className='antialiased min-h-[100svh] mx-auto flex flex-col bg-gradient-to-r shadow-lg lg:shadow-red-600 from-black to-base-900 max-w-[1400px]'
       >
         <HeaderTextProvider>
           <Navbar />

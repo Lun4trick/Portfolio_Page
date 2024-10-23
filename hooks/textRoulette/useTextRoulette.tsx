@@ -4,7 +4,7 @@ function useTextRoulette(textToDisplay: string) {
   const [mixedText, setMixedText] = React.useState('')
 
   const getRandomBinary = () => {
-    const binary = '01'
+    const binary = '01?'
     return binary[Math.floor(Math.random() * binary.length)]
   }
 

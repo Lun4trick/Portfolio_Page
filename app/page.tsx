@@ -1,12 +1,12 @@
 import Resume from "@/components/resume/Resume";
-import TechStacks from "@/components/techStack/TechStacks";
+import TechStacksContainer from "@/components/techStack/TechStacksContainer";
 
 export default function Home() {
   return (
-    <section className='w-full h-full flex flex-col'>
+    <section className="w-full h-full flex flex-col gap-8">
       <Resume />
-      <TechStacks />
-    </section> 
-
+      <TechStacksContainer />
+    </section>
   );
 }
+

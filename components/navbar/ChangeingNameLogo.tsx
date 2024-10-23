@@ -5,8 +5,8 @@ import { useHeaderTextContext } from "@/context/headerTextContext/HeaderTextCont
 function ChangingNameLogo() {
   const { displayedText } = useHeaderTextContext();
   return (
-    <div className="flex items-end p-5">
-      <p className="text-4xl text-green-400 text-glow shadow-green-900">
+    <div className="flex items-end p-5 shrink-0">
+      <p className="text-2xl sm:text-4xl text-green-400 text-glow shadow-green-900">
         {displayedText}
       </p>
       <motion.div
