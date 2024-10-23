@@ -5,6 +5,7 @@ import { MdSecurity } from "react-icons/md";
 import { fullstackStack, aiStack, cybersecurityStack } from "./techStack";
 import * as motion from "framer-motion/client";
 import TechStacks from "./TechStacks";
+import ExperienceButton from "./ExperienceButton";
 
 const techStacks = [
   {
@@ -46,7 +47,7 @@ function TechStacksContainer() {
         {techStacks.map((tech, index) => (
           <div key={tech.title} className="flex flex-col gap-7 items-center">
             <motion.div
-              className="p-1 bg-gradient-to-tr from-base-900 rounded-xl to-base-500 h-[200px] w-full"
+              className="p-1 bg-gradient-to-tr cursor-pointer from-base-900 rounded-xl to-base-500 h-[200px] w-full"
               initial={{
                 boxShadow: "0px 0px 0px 0px rgba(0, 255, 0, 0)",
                 color: "transparent",
@@ -77,8 +78,13 @@ function TechStacksContainer() {
                 ],
               }}
               transition={{
-                duration: 0.5,
-                delay: (index + 1 / 2) * Math.random(),
+                duration: 0.3,
+                delay: (index + 1) * 0.5,
+              }}
+              whileHover={{
+                boxShadow: ["0px 10px 30px 5px rgba(255, 30, 40, 0.3)", "0px 10px 30px 5px rgba(255, 30, 40, 1)"],
+                color: ["rgba(255, 50, 50, 1)"],
+                transition: { duration: 2, repeat: Infinity, repeatType: "reverse" },
               }}
             >
               {tech.icon}
@@ -87,6 +93,7 @@ function TechStacksContainer() {
               {tech.title}
             </p>
             <TechStacks techStack={tech.stack} />
+            <ExperienceButton />
           </div>
         ))}
       </motion.section>
