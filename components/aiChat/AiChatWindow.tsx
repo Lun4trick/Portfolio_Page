@@ -41,13 +41,19 @@ function AiChatWindow({ handleChatClose }: Props) {
                 <AiChatMessages />
                 <AiMessageInput />
               </>
-            : <div className='flex flex-col items-center justify-center h-full'>
+            : <div className='flex flex-col items-center justify-center h-full gap-5'>
+                <h1 className='text-3xl text-green-500 text-glow shadow-green-500'>
+                  Enter your username
+                </h1>
                 <input 
-                  type="text" 
+                  type="text"
+                  className='p-2 bg-base-800 text-green-500 rounded-lg w-3/4'
                   value={userNameController} 
                   onChange={(e) => setUserNameController(e.target.value)} 
                 />
-                <button onClick={() => setUserName(userNameController)}>setusername</button>
+                <button className='bg-green-600 rounded-lg px-4 py-2 hover:shadow-lg shadow-red-700' onClick={() => setUserName(userNameController)}>
+                  setusername
+                </button>
               </div>}
         </div>
     </motion.section>
