@@ -14,7 +14,7 @@ export const AiChatProvider: React.FC<AiChatProviderProps> = ({ children }) => {
 
   useEffect(() => {
     if (!socket.current && userName) {
-      socket.current = io(`https://ai-chat-service-53e99df321b6.herokuapp.com/userName=${userName}`)
+      socket.current = io(`https://ai-chat-service-53e99df321b6.herokuapp.com?userName=${userName}`)
       socket.current.emit('watch-messages')
       socket.current.on('new-message', (msg: Message) => {
         if (msg.role !== 'system') {
