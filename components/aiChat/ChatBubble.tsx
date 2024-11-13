@@ -10,7 +10,7 @@ function ChatBubble( { handleChatOpen }: Props) {
   return (
       <button
         onClick={handleChatOpen}
-        className='p-4 h-[70px] md:h-[100px] box flex justify-center mr-20 self-end items-center absolute bottom-20 rounded-full bg-green-600'>
+        className='p-4 h-[70px] md:h-[100px] box flex justify-center mr-10 self-end items-center absolute bottom-10 rounded-full bg-green-600'>
         <FaRegMessage className='h-full w-full'/>
       </button>
   )
