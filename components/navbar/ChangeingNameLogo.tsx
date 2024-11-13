@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useHeaderTextContext } from "@/context/headerTextContext/HeaderTextContext";
 
 function ChangingNameLogo() {
   const { displayedText } = useHeaderTextContext();
+
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = containerRef.current.scrollWidth;
+    }
+  }, [displayedText]);
+
+
   return (
-    <div className="flex items-end p-5 shrink-0">
-      <p className="text-2xl sm:text-4xl text-green-400 text-glow shadow-green-900">
+    <div ref={containerRef} className="flex scrollbar-hide items-end max-w-full p-5 overflow-x-scroll pointer-events-none">
+      <p className="text-2xl sm:text-4xl shrink-0 text-green-400 text-glow shadow-green-900">
         {displayedText}
       </p>
       <motion.div
@@ -19,3 +29,4 @@ function ChangingNameLogo() {
 }
 
 export default ChangingNameLogo;
+

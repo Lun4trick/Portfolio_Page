@@ -10,8 +10,8 @@ interface TextProviderProps {
 export const HeaderTextProvider: React.FC<TextProviderProps> = ({ children }) => {
   const { displayText, changeText} = useChangingText([
     'Levente Krotos',
-    'Frontend Developer',
-    'React Developer',
+    'But you can call me Levi',
+    'Or you can call me -> +36 70 429 8682',
   ], 100, 1000)
 
   return (

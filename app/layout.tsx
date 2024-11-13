@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html className="overflow-x-hidden" lang="en">
       <body
-        className='antialiased min-h-[100svh] mx-auto flex flex-col bg-gradient-to-r shadow-lg lg:shadow-red-600 from-black to-base-900 max-w-[1400px]'
+        className='antialiased overflow-x-hidden min-h-[100svh] mx-auto flex flex-col bg-gradient-to-r shadow-lg lg:shadow-red-600 from-black to-base-900 max-w-[1400px]'
       >
         <AiChatProvider>
           <HeaderTextProvider>

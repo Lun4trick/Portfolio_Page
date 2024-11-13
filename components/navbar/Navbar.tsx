@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import ChangingNameLogo from './ChangeingNameLogo'
 import { motion } from 'framer-motion'
 

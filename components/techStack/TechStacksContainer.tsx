@@ -5,7 +5,6 @@ import { MdSecurity } from "react-icons/md";
 import { fullstackStack, aiStack, cybersecurityStack } from "./techStack";
 import * as motion from "framer-motion/client";
 import TechStacks from "./TechStacks";
-import ExperienceButton from "./ExperienceButton";
 
 const techStacks = [
   {
@@ -36,13 +35,13 @@ function TechStacksContainer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-       className="text-4xl mx-auto text-green-400 text-glow shadow-red-800"> 
+       className="text-4xl mx-auto text-red-300 text-glow shadow-red-800"> 
         My technology stack
       </motion.h1>
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="flex flex-col sm:flex-row w-full justify-evenly p-2"
+        className="flex flex-col sm:flex-row w-full justify-evenly gap-10 sm:gap-5 p-2"
       >
         {techStacks.map((tech, index) => (
           <div key={tech.title} className="flex flex-col gap-7 items-center">
@@ -89,11 +88,10 @@ function TechStacksContainer() {
             >
               {tech.icon}
             </motion.div>
-            <p className="text-glow text-green-300 shadow-red-700">
+            <p className="text-glow text-red-300 shadow-red-700">
               {tech.title}
             </p>
             <TechStacks techStack={tech.stack} />
-            <ExperienceButton />
           </div>
         ))}
       </motion.section>
